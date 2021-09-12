@@ -6,8 +6,7 @@ import Forecast from './component/Forecast';
 import ProtectedRoute from './utils/ProtectedRoute';
 import { AuthContext, Auth } from './utils/userAuth';
 
-export default class App extends React.Component {
-  render() {
+export default function App(): JSX.Element {
     return (
       <AuthContext.Provider value={new Auth()}>
         <Switch>
@@ -19,5 +18,4 @@ export default class App extends React.Component {
         </Switch>
       </AuthContext.Provider>
     );
-  }
 }
